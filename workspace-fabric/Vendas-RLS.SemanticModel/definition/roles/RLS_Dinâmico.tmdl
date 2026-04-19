@@ -1,0 +1,7 @@
+role RLS_Dinâmico
+	modelPermission: read
+
+	tablePermission dVendedores = [email] = USERNAME()
+
+	annotation PBI_Id = 8ccafaff7ddc4a73bda13f770a65721d
+

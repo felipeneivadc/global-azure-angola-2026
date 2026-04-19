@@ -1,0 +1,4 @@
+botcomponent_connectionreference:
+  '@botcomponentid.schemaname': copilots_header_dev_agent1.action.Disruptivo-Data-Agent
+  '@connectionreferenceid.connectionreferencelogicalname': copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  iscustomizable: 1

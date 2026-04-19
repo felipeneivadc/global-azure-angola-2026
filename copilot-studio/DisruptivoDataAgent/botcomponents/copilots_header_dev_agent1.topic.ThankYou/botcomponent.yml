@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.ThankYou
+  componenttype: 9
+  description: Esse tópico é disparado quando o usuário agradece.
+  iscustomizable: 0
+  name: Obrigado
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

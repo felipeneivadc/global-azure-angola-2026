@@ -1,0 +1,103 @@
+table TabVendas
+	lineageTag: 24b458c9-e459-4938-b9f5-d94ec61ed690
+
+	column DATAVENDA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 15213279-6a55-4667-847e-409561741f9f
+		summarizeBy: none
+		sourceColumn: DATAVENDA
+
+		variation Variation
+			isDefault
+			relationship: 453f71f0-bfd8-4ea6-90e0-a0fb36f303ee
+			defaultHierarchy: LocalDateTable_59ad2700-77ae-488d-ad4b-09504336a9c6.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column IDPRODUTO
+		dataType: int64
+		formatString: 0
+		lineageTag: b4a75525-7473-47b3-8fe7-73bb96eb1106
+		summarizeBy: sum
+		sourceColumn: IDPRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO
+		dataType: string
+		lineageTag: f3483dcd-67a6-4545-aa64-80b697b73ae8
+		summarizeBy: none
+		sourceColumn: PRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 9f1414ef-4b4c-4c86-96fd-9ada9a9fb9a8
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIDADE
+		dataType: string
+		lineageTag: a8d6fc78-d448-43dc-a292-77d869b72110
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: CIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGIÃO
+		dataType: string
+		lineageTag: 293f6489-3d97-490c-aab4-392efa8a4292
+		summarizeBy: none
+		sourceColumn: REGIÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column TOTAL
+		dataType: int64
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 1aba53a6-be08-43bb-9729-e0d758f53430
+		summarizeBy: sum
+		sourceColumn: TOTAL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column COMISSÃO
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: e9be8b5b-3792-47ce-b71b-c1f101933d84
+		summarizeBy: sum
+		sourceColumn: COMISSÃO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition TabVendas-802ca82f-bdfd-4606-a875-b5ec6f6447b2 = m
+		mode: import
+		source =
+				let
+				    // IMPORTANTE: Substitua o caminho abaixo pelo local do arquivo Excel no seu ambiente
+				    Fonte = Excel.Workbook(File.Contents("C:\Dados\Base primeiros passos.xlsx"), null, true),
+				    TabVendas_Table = Fonte{[Item="TabVendas",Kind="Table"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(TabVendas_Table,{{"DATAVENDA", type date}, {"IDPRODUTO", Int64.Type}, {"PRODUTO", type text}, {"UF - CIDADE", type text}, {"REGIÃO", type text}, {"TOTAL", Int64.Type}, {"COMISSÃO", type number}}),
+				    #"Texto em Maiúscula" = Table.TransformColumns(#"Tipo Alterado",{{"PRODUTO", Text.Upper, type text}}),
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Texto em Maiúscula", "UF - CIDADE", Splitter.SplitTextByEachDelimiter({"-"}, QuoteStyle.Csv, false), {"UF - CIDADE.1", "UF - CIDADE.2"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"UF - CIDADE.1", type text}, {"UF - CIDADE.2", type text}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado1",{{"UF - CIDADE.1", "UF"}, {"UF - CIDADE.2", "CIDADE"}})
+				in
+				    #"Colunas Renomeadas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.gpt.default
+  componenttype: 15
+  description: Agente de Dados de Vendas Veicular
+  iscustomizable: 0
+  name: Agente de Dados de Vendas Veicular
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

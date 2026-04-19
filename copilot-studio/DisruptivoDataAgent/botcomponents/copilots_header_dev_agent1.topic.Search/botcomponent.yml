@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.Search
+  componenttype: 9
+  description: Crie respostas generativas de fontes de conhecimento.
+  iscustomizable: 0
+  name: Melhora da conversa
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

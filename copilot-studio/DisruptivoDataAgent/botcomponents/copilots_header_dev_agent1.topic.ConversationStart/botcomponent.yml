@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.ConversationStart
+  componenttype: 9
+  description: Esse tópico do sistema é disparado quando o agente recebe uma Atividade que indica o início de uma nova conversa. Se você não quiser que o agente inicie a conversa, desabilite esse tópico.
+  iscustomizable: 0
+  name: Início da conversa
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

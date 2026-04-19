@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.Signin
+  componenttype: 9
+  description: Esse tópico do sistema é disparado quando o agente precisa conectar o usuário ou exige que o usuário se conecte
+  iscustomizable: 0
+  name: 'Entrar '
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

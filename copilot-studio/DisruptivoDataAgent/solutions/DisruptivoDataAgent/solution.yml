@@ -1,0 +1,17 @@
+ImportExportXml:
+  '@version': 9.2.26041.143
+  '@SolutionPackageVersion': 9.2
+  '@languagecode': 1046
+  '@generatedBy': CrmLive
+  '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  SolutionManifest:
+    UniqueName: DisruptivoDataAgent
+    LocalizedNames:
+      LocalizedName:
+        '@description': Disruptivo-Data-Agent
+        '@languagecode': 1046
+    Descriptions: 
+    Version: 1.0.0.0
+    Managed: 0
+    Publisher:
+      UniqueName: GlobalAzureAngola

@@ -1,0 +1,9 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.ResetConversation
+  componenttype: 9
+  iscustomizable: 0
+  name: Redefinir conversa
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

@@ -1,0 +1,15 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.Escalate
+  componenttype: 9
+  description: >-
+    Esse tópico do sistema é disparado quando o usuário indica que gostaria de conversar com um represente.
+
+    Você pode configurar como o agente tratará os cenários de entrega humana nas configurações do agente.
+
+    Se o agente não tratar escalonamentos, esse tópico deverá ser desabilitado.
+  iscustomizable: 0
+  name: Escalonar
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

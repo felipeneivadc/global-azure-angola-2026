@@ -1,0 +1,21 @@
+kind: TaskDialog
+inputs:
+  - kind: ManualTaskInput
+    propertyName: artifactId
+    value: f702af54-500c-4e6e-a282-60034f374e49
+
+  - kind: ManualTaskInput
+    propertyName: workspaceId
+    value: 00000000-0000-0000-0000-000000000000
+
+modelDisplayName: Disruptivo Data Agent
+modelDescription: Agente de Dados de Vendas Veicular
+action:
+  kind: InvokeExternalAgentTaskAction
+  connectionReference: copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  connectionProperties:
+    mode: Maker
+
+  operationDetails:
+    kind: ModelContextProtocolMetadata
+    operationId: InvokeMCP

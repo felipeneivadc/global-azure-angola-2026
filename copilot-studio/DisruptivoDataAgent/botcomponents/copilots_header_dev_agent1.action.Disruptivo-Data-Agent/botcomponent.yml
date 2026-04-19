@@ -1,0 +1,9 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.action.Disruptivo-Data-Agent
+  componenttype: 9
+  iscustomizable: 0
+  name: Disruptivo-Data-Agent
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

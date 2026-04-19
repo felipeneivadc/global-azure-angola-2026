@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["MEDIDAS","dVendedores","CONSOLIDADO"]
+
+ref table DateTableTemplate_ddfe760f-039d-4209-8905-8d0fe690c10b
+ref table MEDIDAS
+ref table dVendedores
+ref table CONSOLIDADO
+
+ref role RLS_Dinâmico
+ref role 'Reg NORTE'
+
+ref cultureInfo pt-BR
+

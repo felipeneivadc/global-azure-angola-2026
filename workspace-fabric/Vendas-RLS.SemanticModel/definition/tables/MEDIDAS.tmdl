@@ -1,0 +1,40 @@
+table MEDIDAS
+	lineageTag: 602f75e1-9187-41e2-84d4-4fc13210d1cf
+
+	measure Receita = SUMX(CONSOLIDADO, CONSOLIDADO[QTDE] * CONSOLIDADO[ PREÇO ])
+		formatString: #,0
+		lineageTag: 6ade1ed8-7e61-4883-9c02-0b45f4b367ab
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Receita Máx' = MAXX(CONSOLIDADO, CONSOLIDADO[QTDE] * CONSOLIDADO[ PREÇO ])
+		formatString: #,0.00
+		lineageTag: 1fc2315a-a004-46a5-90f3-015f547a2c4f
+
+	measure 'Receita Média' = AVERAGEX(CONSOLIDADO, CONSOLIDADO[QTDE] * CONSOLIDADO[ PREÇO ])
+		formatString: #,0.00
+		lineageTag: d8e2c0f0-4726-41c0-bd89-26a51ae1a9ad
+
+	measure 'Receita Mín' = MINX(CONSOLIDADO, CONSOLIDADO[QTDE] * CONSOLIDADO[ PREÇO ])
+		lineageTag: 6cb3fbd3-d394-406f-983a-e6e9ee04e3e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Volume Vendas' = COUNTROWS(CONSOLIDADO)
+		formatString: #,0
+		lineageTag: e4f9d069-ebf9-4ce7-a224-2b29f96ed74c
+
+	partition MEDIDAS-7285a3d6-4f3a-41a9-8658-b3eba21d861a = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

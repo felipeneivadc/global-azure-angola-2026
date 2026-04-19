@@ -1,0 +1,21 @@
+SolutionComponents:
+  Component:
+  - '@path': /botcomponent_connectionreferenceset/botcomponentid.schemaname=copilots_header_dev_agent1.action.Disruptivo-Data-Agent,connectionreferenceid.connectionreferencelogicalname=copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  - '@path': /botcomponents/copilots_header_dev_agent1.action.Disruptivo-Data-Agent
+  - '@path': /botcomponents/copilots_header_dev_agent1.gpt.default
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.ConversationStart
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.EndofConversation
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Escalate
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Fallback
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Goodbye
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Greeting
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.MultipleTopicsMatched
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.OnError
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.ResetConversation
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Search
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.Signin
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.StartOver
+  - '@path': /botcomponents/copilots_header_dev_agent1.topic.ThankYou
+  - '@path': /bots/copilots_header_dev_agent1
+  - '@path': /connectionreferences/copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  - '@path': /publishers/GlobalAzureAngola

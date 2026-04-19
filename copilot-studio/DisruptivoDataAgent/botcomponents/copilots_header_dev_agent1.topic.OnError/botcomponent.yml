@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.OnError
+  componenttype: 9
+  description: Esse tópico do sistema é desencadeado quando o agente encontra um erro. Ao usar o painel de chat de teste, a descrição completa do erro é exibida.
+  iscustomizable: 0
+  name: Se houver erro
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

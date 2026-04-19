@@ -1,0 +1,13 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.EndofConversation
+  componenttype: 9
+  description: >-
+    Esse tópico do sistema é disparado apenas por uma ação de redirecionamento,
+
+    e guia o usuário para classificar a conversa com o agente.
+  iscustomizable: 0
+  name: Fim da conversa
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

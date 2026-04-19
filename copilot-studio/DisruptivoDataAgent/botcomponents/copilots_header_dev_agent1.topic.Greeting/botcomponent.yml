@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.Greeting
+  componenttype: 9
+  description: Esse tópico é disparado quando o usuário cumprimenta o agente.
+  iscustomizable: 0
+  name: Saudação
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1

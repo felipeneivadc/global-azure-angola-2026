@@ -1,0 +1,8 @@
+connectionreference:
+  '@connectionreferencelogicalname': copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  connectionreferencedisplayname: copilots_header_dev_agent1.shared_fabricdataagent.d5f58b1affaa4d84a329bc1d319bc769
+  connectorid: /providers/Microsoft.PowerApps/apis/shared_fabricdataagent
+  iscustomizable: 0
+  promptingbehavior: 0
+  statecode: 0
+  statuscode: 1

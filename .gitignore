@@ -1,0 +1,30 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Power Platform
+**/bin/
+**/obj/
+*.msapp
+*.zip
+
+# Node / npm (caso de extensões futuras)
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Logs
+*.log

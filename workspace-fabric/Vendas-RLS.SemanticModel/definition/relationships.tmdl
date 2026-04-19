@@ -1,0 +1,4 @@
+relationship 0aabe214-148c-4219-86b4-4df82ea2d7be
+	fromColumn: CONSOLIDADO.IDVendedor
+	toColumn: dVendedores.IDVendedor
+

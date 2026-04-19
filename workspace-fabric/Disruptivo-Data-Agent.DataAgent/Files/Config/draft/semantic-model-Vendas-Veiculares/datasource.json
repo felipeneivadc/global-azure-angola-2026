@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "d28cd3bc-8775-bc6e-40c4-76e013fe82f5",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "Vendas-Veiculares",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "24b458c9-e459-4938-b9f5-d94ec61ed690",
+      "is_selected": true,
+      "display_name": "TabVendas",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "a8d6fc78-d448-43dc-a292-77d869b72110",
+          "is_selected": true,
+          "display_name": "CIDADE",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e9be8b5b-3792-47ce-b71b-c1f101933d84",
+          "is_selected": true,
+          "display_name": "COMISSÃO",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "15213279-6a55-4667-847e-409561741f9f",
+          "is_selected": true,
+          "display_name": "DATAVENDA",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b4a75525-7473-47b3-8fe7-73bb96eb1106",
+          "is_selected": true,
+          "display_name": "IDPRODUTO",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f3483dcd-67a6-4545-aa64-80b697b73ae8",
+          "is_selected": true,
+          "display_name": "PRODUTO",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "293f6489-3d97-490c-aab4-392efa8a4292",
+          "is_selected": true,
+          "display_name": "REGIÃO",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1aba53a6-be08-43bb-9729-e0d758f53430",
+          "is_selected": true,
+          "display_name": "TOTAL",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9f1414ef-4b4c-4c86-96fd-9ada9a9fb9a8",
+          "is_selected": true,
+          "display_name": "UF",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+table CONSOLIDADO
+	lineageTag: 6f1014bd-160e-4cd8-89ac-ebac2c9e97d1
+
+	column IDVendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: b7568ff7-96c8-4348-bd50-9b9763ebede4
+		summarizeBy: none
+		sourceColumn: IDVendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDPRODUTO
+		dataType: int64
+		formatString: 0
+		lineageTag: 06fa9cc9-98ad-4459-ab12-1742da99139d
+		summarizeBy: sum
+		sourceColumn: IDPRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO
+		dataType: string
+		lineageTag: 7869ad97-5e59-4fb9-aeff-9b5a547027ea
+		summarizeBy: none
+		sourceColumn: PRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column UF
+		dataType: string
+		lineageTag: ad0fdec5-f424-42d9-adad-1b026bcc469d
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CIDADE
+		dataType: string
+		lineageTag: c9f47b05-ee20-4618-bcdc-dd40dd6d3daa
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: CIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column REGIÃO
+		dataType: string
+		lineageTag: 7c994978-393c-486c-89c1-af18076e12e8
+		summarizeBy: none
+		sourceColumn: REGIÃO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column ' PREÇO '
+		dataType: double
+		lineageTag: 632608d3-7afe-43fa-a0d0-bc5453ca6796
+		summarizeBy: sum
+		sourceColumn: " PREÇO "
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QTDE
+		dataType: int64
+		formatString: 0
+		lineageTag: afc33211-f366-41cb-b2b7-a05685a5a66c
+		summarizeBy: sum
+		sourceColumn: QTDE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CONSOLIDADO-148c454e-fd64-45d8-8c50-e8101a14cfe4 = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("eJydl01u2zAQRq8ieJ0Fh7/DpdMaSYMkNuwUKBBkoTZqYcCIADfpotfpUXqxUkOFclIOJTsLmQbCEfn0OPp8fz+D2Vk1W95++tJ9blZ0/funrVb1y66lb58/LjZ3i24IwnphupGkr7OHs+o+ji/Ppeg+11d03bbVY1Nd1U/Ndv++irVWeZovYymqorrxfH2x7D5vLrrrebNrq8t2v/3dPj0376qgElJ3A7qoWITGq+U1FTmf05R696t+bPfd+Ha5TvOdtxLjVCpC82lvH9aLO5o6v6G11E/1y89+es8BlLQDBxMnvyG5WlOpl/32efu1jmu/jgy90jhsPwtxQyXa/XNbzXfNj33zpoBwGtLNc/hWtMp18237vXm/bxDKerq/48CNWGCdwH7pHLkJFjgALdLzyyGcIkFwgLbhOZRlCUBobVTaS44lL4EAh1A0kJcAwEsTRzzEogXBIyvT1rMKFizwUnuV1p4DNyKB17o/xIIjN0ECVFLRmkFxDCdYYI3uYfJnecSD7lGK1A1yNAvNQLjokONYsh6gk/EsGhZiSQJnAH3ZwFInABN6AQFksY1Y4KDvJWwfnCKBx4MiOX5TOgEaSdsAzaEsK4DOxK766sH/MFkFUCo1JiDrgHUYexjwEEsSeAMCUyPI6leQwClA+idgFRxxIDw84dLjy3Gb4EBopuEIppOQJTjBgtBWlTnoqzmYY28EY/pnaTievAfohBgcyr6aOQ2cswIGDbIcSxpYb0yMFbyCxViAStnUS3LgxsIhmBDs0iM8MRw6IaUvn+NpucAcdIMT0iFYoGU4liZvgZJA05AjWQiHIRyLYeFHh0NEL3zcMidgQQL0Mt7dctTG3gfolBiO36nZEEM6scNZODEchoTk+jLAwSxbYL11IyGnEA+tfU01DMyCBuHPDACOj4chzejh5kenQyO9TvafkA5RWh+Z88FmykvB+rgLvidO8iAEneGnxinxUHi0Q1IKOB/+AS9PZMY=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [IDPRODUTO = _t, PRODUTO = _t, UF = _t, CIDADE = _t, REGIÃO = _t, #" PREÇO " = _t, QTDE = _t, IDVendedor = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"IDVendedor", Int64.Type}, {"IDPRODUTO", Int64.Type}, {"PRODUTO", type text}, {"UF", type text}, {"CIDADE", type text}, {"REGIÃO", type text}, {" PREÇO ", type number}, {"QTDE", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,10 @@
+botcomponent:
+  '@schemaname': copilots_header_dev_agent1.topic.Fallback
+  componenttype: 9
+  description: Esse tópico do sistema é disparado quando o enunciado do usuário não corresponde aos tópicos existentes.
+  iscustomizable: 0
+  name: Fallback
+  parentbotid:
+    schemaname: copilots_header_dev_agent1
+  statecode: 0
+  statuscode: 1
