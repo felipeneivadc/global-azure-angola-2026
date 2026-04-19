@@ -1,11 +1,13 @@
-# Global Azure Angola 2026 — Demos & Recursos
+# Global Azure Angola 2026 — A2A na Prática: Conectando Fabric Data Agents ao Copilot Studio
 
-Repositório de demonstrações apresentadas no **Global Azure Angola 2026**, cobrindo cenários de **Microsoft Fabric**, **Power BI Semantic Models** e **Microsoft Copilot Studio**.
+Repositório com a apresentação e demos do **Global Azure Angola 2026**, cobrindo cenários de **Microsoft Fabric**, **Power BI Semantic Models** e **Microsoft Copilot Studio**.
 
 ## Conteúdo do Repositório
 
 ```
 .
+├── presentation/                        # Slides da apresentação (PDF)
+│
 ├── copilot-studio/                      # Solução Power Platform (Copilot Studio)
 │   └── DisruptivoDataAgent/             # Agente "Vendas Veicular" → Teams / M365 Copilot
 │
